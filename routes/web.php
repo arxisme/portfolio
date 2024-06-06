@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\home;
 use Illuminate\Support\Facades\Route;
-
+Use App\Http\Controllers\PostController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -16,5 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/blog',[PostController::class, 'index'])->name('blog.index');
+Route::get('/blog/{id}',[PostController::class, 'show'])->name('blog.show');
 
-require __DIR__.'/auth.php';
+Route::get('/home',[home::class , 'index']);
+require __DIR__.'/auth.php';    
