@@ -1,0 +1,254 @@
+/* style.css */
+@font-face {
+    font-family: lexendTera;
+    src: url('../fonts/LexendTera-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Sometypemono';
+    src: url('../fonts/SometypeMono-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family:Montserrat ;
+    src: url('../fonts/Montserrat-ExtraLight.ttf');
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: url('../imgs/back-g.svg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.corner-image {
+    position: fixed;
+  width: 45%;
+    min-width: 350px;
+    max-width: 450px; /* Set your desired maximum width here */
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.rect1 {
+    background: url('../imgs/backrect.svg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    min-width: 150px;
+    max-width: 250px; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.rect1 span{
+    
+    position: absolute;
+
+    bottom: 0;
+    width: 100%; /* Ensure the span covers the full width */
+    align-items: center;
+    padding-bottom: 20px;
+    font-family:'Sometypemono';
+    
+    
+}
+.rect1 span .time {
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 10px;
+    color: #DD5746;
+    
+}
+.rect1 span .date {
+    text-align: center;
+    font-size:small;
+    color: #9A9A9A;
+    padding-bottom: 10px;
+}
+
+
+.rect2 {
+    display: none;
+    
+    position: relative; /* Add relative positioning */
+    width:10%;
+    max-width: 250px;
+    min-width: 180px;
+    background: url('../imgs/backrect.svg') no-repeat center center ;
+    background-size: cover;
+    /* width: 100%; */
+    height: 100%; 
+    padding-top: 0;
+     /* Set a specific height for .rect2 */
+}
+
+.link-box {
+    
+    position: absolute; /* Add absolute positioning */
+    background: url('../imgs/Links-Box-bg.svg') no-repeat center center; 
+  
+    background-size: cover;
+    top: 170px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.76);
+    height: 300px;
+}
+.link-box-mobile {
+    display: block;
+    position: absolute; /* Add absolute positioning */
+    background: url('../imgs/Links-Box-bg.svg') no-repeat center center; 
+    
+    background-size: cover;
+    top: 220px;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.76);
+    height: 170px;
+}
+.link-box-mobile ul{
+    list-style-type: none;
+}
+/* .link-box-mobile ul li{
+    
+    font-family: lexendTera;
+    font-size: small;
+    color: #FFC26D;
+    padding: 0px;
+    list-style-type:square;
+    
+} */
+.blank1{
+    flex: 7;
+  
+}
+.blank1 div{
+    height: 73%;
+    padding-top: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Montserrat;
+    color: #1A153C;
+   
+    font-size: x-small;
+    text-align: justify;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scrollbar-width:none;
+    scroll-behavior: smooth;
+    scrollbar-color:black ;
+    
+}
+/* Initially hide .blank2 */
+.blank2 {
+    flex: 2;
+    display: none;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* Show .blank2 when screen width is 800px or more */
+/* @media (min-width: 800px) {
+    
+} */
+
+/* Other styles remain the same */
+.blank2 div {
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+   padding: 10px;
+   overflow: hidden;
+}
+
+.blank2 div img {
+    width:80%;
+    height: auto;
+    padding-bottom: 20px;
+   
+}
+
+
+a{
+    text-decoration: none;
+    color: #FFC26D;
+    text-decoration: underline;    
+}
+a :visited{
+    text-decoration: none;
+    color: #b69363;
+    text-decoration: underline;  
+}
+ul{
+    padding: 15px;
+}
+
+ul li{
+    font-family: lexendTera;
+    font-size: small;
+    color: #FFC26D;
+    padding: 5px;
+    list-style-type:none;
+    
+}
+@media (min-width:900px) {
+    .blank2 {
+        display: flex;
+    }
+    .link-box-mobile {
+        display: none;
+    }
+    .rect2{
+        display: block;
+    }
+    .blank2{
+        display: block;
+    }
+    .rect1 {
+    
+       width: 190px;
+       
+        
+    }
+    .rect1 span .time {
+        text-align: center;
+        font-size: xx-large;
+        padding-bottom: 10px;
+        color: #DD5746;
+        
+    }
+    .rect1 span .date {
+        text-align: center;
+        font-size:medium;
+        color: #9A9A9A;
+        padding-bottom: 10px;
+    }
+   
+}
+ 
+
+
+
+
+@media(max-width: 900px) {
+    .rect1 {
+        width: 150px; /* or any value that you find suitable */
+    }
+}
