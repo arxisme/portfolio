@@ -20,5 +20,5 @@ Route::middleware('auth')->group(function () {
 Route::get('/blog',[PostController::class, 'index'])->name('blog.index');
 Route::get('/blog/{id}',[PostController::class, 'show'])->name('blog.show');
 
-Route::get('/home',[home::class , 'index']);
+Route::get('/home',[home::class , 'index'])->name('home');
 require __DIR__.'/auth.php';    

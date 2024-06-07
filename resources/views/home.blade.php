@@ -14,8 +14,8 @@
         <div class="rect1">
             <div class="link-box-mobile">
                 <ul>
-                    <li><a href="#">BLOGS</a></li>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="{{ route('blog.index')}}">BLOGS</a></li>
+                    <li><a href="{{ route('home')}}">ABOUT</a></li>
                     <li><a href="#">CONTACT</a></li>
 
                 </ul>
@@ -32,8 +32,8 @@
         <div class="rect2">
             <div class="link-box">
                 <ul>
-                    <li><a href="#">BLOGS</a></li>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="{{ route('blog.index')}}">BLOGS</a></li>
+                    <li><a href="{{ route('home')}}">ABOUT</a></li>
                     <li><a href="#">CONTACT</a></li>
 
                 </ul>

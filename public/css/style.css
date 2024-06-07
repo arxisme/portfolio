@@ -1,32 +1,105 @@
 /* style.css */
 @font-face {
+    font-family: jmhtype;
+    src: url("../fonts/OldNewspaperTypes.ttf");
+}
+@font-face {
     font-family: lexendTera;
-    src: url('../fonts/LexendTera-VariableFont_wght.ttf');
-}
-
-@font-face {
-    font-family: 'Sometypemono';
-    src: url('../fonts/SometypeMono-VariableFont_wght.ttf') format('truetype');
+    src: url("../fonts/LexendTera-VariableFont_wght.ttf");
 }
 @font-face {
-    font-family:Montserrat ;
-    src: url('../fonts/Montserrat-ExtraLight.ttf');
+    font-family: merriweather;
+    src: url("../fonts/Merriweather-Regular.ttf");
 }
-html, body {
+@font-face {
+    font-family: "Sometypemono";
+    src: url("../fonts/SometypeMono-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+    font-family: Montserrat;
+    src: url("../fonts/Montserrat-ExtraLight.ttf");
+}
+html,
+body {
     height: 100%;
     margin: 0;
 }
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
 body {
-    background: url('../imgs/back-g.svg') no-repeat center center fixed;
+    background: url("../imgs/back-g.svg") no-repeat center center fixed;
+    filter: contrast(110%);
     background-size: cover;
-    display: flex;
+
     align-items: center;
     justify-content: center;
 }
+#topBar {
+    font-family: jmhtype;
+    color: #ffc26d;
+    background-image: url("../imgs/topbar.svg");
+    filter: contrast(85%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: contrast(90%);
+    position: fixed;
+    box-shadow: -30px 30px 30px #000000a6;
+    
+
+    transition: top 0.3s;
+    width: 200px;
+    height: 15%;
+    /* Set your desired maximum width here */
+    top: -50px;
+    left: 55px;
+    z-index: 999;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+}
+#blogBar {
+    font-family: jmhtype;
+    color: #ffc26d;
+    background-image: url("../imgs/Links-Box-bg.svg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: contrast(90%);
+    position: fixed;
+    box-shadow: -30px 30px 30px #000000a6;
+    
+  
+    transition: top 0.3s;
+    width: 200px;
+    padding-top: 25px;
+    height: 70px;
+    align-items:center ;
+    
+    text-align: center;
+    vertical-align: middle;
+    /* Set your desired maximum width here */
+    top: 20px;
+    left: 130px;
+    z-index: 999;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+}
+#blogBar h1{
+    vertical-align: middle;
+    height: 100%;
+
+}
+
+.scroll-hide.hidden {
+    transform: translateY(100%);
+  }
 .corner-image {
     position: fixed;
-  width: 45%;
+    width: 45%;
     min-width: 350px;
     max-width: 450px; /* Set your desired maximum width here */
     top: 0px;
@@ -41,63 +114,65 @@ body {
 }
 
 .rect1 {
-    background: url('../imgs/backrect.svg') no-repeat center center;
+    background: url("../imgs/backrect.svg") no-repeat center center;
+
     background-size: cover;
     width: 100%;
     min-width: 150px;
-    max-width: 250px; 
+    max-width: 250px;
     height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
 }
-.rect1 span{
-    
+.rect1 span {
     position: absolute;
 
     bottom: 0;
     width: 100%; /* Ensure the span covers the full width */
     align-items: center;
     padding-bottom: 20px;
-    font-family:'Sometypemono';
-    
-    
+    font-family: "Sometypemono";
 }
 .rect1 span .time {
     text-align: center;
     font-size: x-large;
     padding-bottom: 10px;
-    color: #DD5746;
-    
+    color: #dd5746;
 }
 .rect1 span .date {
     text-align: center;
-    font-size:small;
-    color: #9A9A9A;
+    font-size: small;
+    color: #9a9a9a;
     padding-bottom: 10px;
 }
 
-
 .rect2 {
     display: none;
-    
+
     position: relative; /* Add relative positioning */
-    width:10%;
+    width: 10%;
     max-width: 250px;
     min-width: 180px;
-    background: url('../imgs/backrect.svg') no-repeat center center ;
+    background: url("../imgs/backrect.svg") no-repeat center center;
+
     background-size: cover;
     /* width: 100%; */
-    height: 100%; 
+    height: 100%;
     padding-top: 0;
-     /* Set a specific height for .rect2 */
+    /* Set a specific height for .rect2 */
 }
-
+.stamp {
+    display: none;
+    position: fixed;
+    top: 220px;
+    left: 8px;
+    max-height: 120px;
+}
 .link-box {
-    
     position: absolute; /* Add absolute positioning */
-    background: url('../imgs/Links-Box-bg.svg') no-repeat center center; 
-  
+    background: url("../imgs/Links-Box-bg.svg") no-repeat center center;
+
     background-size: cover;
     top: 170px;
     left: 0;
@@ -108,8 +183,8 @@ body {
 .link-box-mobile {
     display: block;
     position: absolute; /* Add absolute positioning */
-    background: url('../imgs/Links-Box-bg.svg') no-repeat center center; 
-    
+    background: url("../imgs/Links-Box-bg.svg") no-repeat center center;
+
     background-size: cover;
     top: 220px;
     left: 0;
@@ -118,7 +193,7 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.76);
     height: 170px;
 }
-.link-box-mobile ul{
+.link-box-mobile ul {
     list-style-type: none;
 }
 /* .link-box-mobile ul li{
@@ -130,26 +205,43 @@ body {
     list-style-type:square;
     
 } */
-.blank1{
+.blank1 {
     flex: 7;
-  
 }
-.blank1 div{
-    height: 73%;
-    padding-top: 20%;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: Montserrat;
-    color: #1A153C;
-   
-    font-size: x-small;
+.blog-heading {
+    padding-bottom: 40px;
+}
+.blank1 div {
+    height: calc(100% - 50px);
+
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right:5%;
+    /* font-family:Sometypemono; */
+    font-family: jmhtype;
+    color: #0b1d35;
+
+    font-size: 20px;
+    /* font-weight: 200; */
     text-align: justify;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Hide horizontal scrollbar */
-    scrollbar-width:none;
+    scrollbar-width: none;
     scroll-behavior: smooth;
-    scrollbar-color:black ;
-    
+    scrollbar-color: black;
+}
+.blank1 div ul li{
+    background-image: url('../imgs/topbar.svg');
+    border-radius: 5px;
+    font-size: 20px;
+    height: 75px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.596);
+
+}
+.blank1 div ul li a{
+    text-decoration-line: none;
 }
 /* Initially hide .blank2 */
 .blank2 {
@@ -170,85 +262,99 @@ body {
 /* Other styles remain the same */
 .blank2 div {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: flex-end;
     width: 100%;
     height: 100%;
-   padding: 10px;
-   overflow: hidden;
+    padding: 10px;
+    overflow: hidden;
 }
 
 .blank2 div img {
-    width:80%;
+    width: 80%;
     height: auto;
     padding-bottom: 20px;
-   
 }
 
-
-a{
+a {
     text-decoration: none;
-    color: #FFC26D;
-    text-decoration: underline;    
+    color: #ffc26d;
+    text-decoration: underline;
 }
-a :visited{
+a :visited {
     text-decoration: none;
     color: #b69363;
-    text-decoration: underline;  
+    text-decoration: underline;
 }
-ul{
+ul {
     padding: 15px;
 }
 
-ul li{
+ul li {
     font-family: lexendTera;
     font-size: small;
-    color: #FFC26D;
-    padding: 5px;
-    list-style-type:none;
-    
+    color: #ffc26d;
+    padding: 13px;
+    list-style-type: none;
 }
-@media (min-width:900px) {
+@media (min-width: 900px) {
+
+    #topBar{
+        left:70%;
+        height: 20%;
+    }
+   
+    .stamp {
+        display: block;
+    }
     .blank2 {
         display: flex;
     }
+      
+    
     .link-box-mobile {
         display: none;
     }
-    .rect2{
+    .rect2 {
         display: block;
     }
-    .blank2{
+    .blank2 {
         display: block;
     }
     .rect1 {
-    
-       width: 190px;
-       
-        
+        width: 190px;
     }
     .rect1 span .time {
         text-align: center;
         font-size: xx-large;
         padding-bottom: 10px;
-        color: #DD5746;
-        
+        color: #dd5746;
     }
     .rect1 span .date {
         text-align: center;
-        font-size:medium;
-        color: #9A9A9A;
+        font-size: medium;
+        color: #9a9a9a;
         padding-bottom: 10px;
     }
-   
 }
- 
 
-
-
-
-@media(max-width: 900px) {
-    .rect1 {
-        width: 150px; /* or any value that you find suitable */
+@media (max-width: 900px) {
+    .blank1 div {
+        height: calc(100% - 100px);
+        padding-top: 100px;
+        font-size: 17px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+    .rect1 {
+        width: 150px;
+        /* or any value that you find suitable */
+    }
+}
+.hidden {
+    transform: translateY(-100%);
+}
+
+.visible {
+    transform: translateY(0);
 }
